@@ -1,0 +1,33 @@
+﻿@model IList<ViewComponentRazorPage.Models.Employee>
+
+<h1>Employee List Details</h1>
+<hr />
+@foreach (var item in Model)
+{
+    <div class="container p-3 my-3 border">
+        <div class="card-body" style="margin-left:300px; margin-top:20; ">
+            <div class="row">
+                <div class="col-md-6">
+                    <span>Name :</span>
+                    <label>@item.Name</label>
+                </div>
+                <div class="col-md-6">
+                    <span>Address :</span>
+                    <label>@item.Address</label>
+                </div>
+                <div class="col-md-6">
+                    <span>Designation :</span>
+                    <label>@item.Designation</label>
+                </div>
+                <div class="row-cols-md-6">
+                    <span>Salary :</span>
+                    <label>@item.Salary</label>
+                </div>
+                <div class="col-md-6">
+                    <span>Joining Date :</span>
+                    <label>@item.JoiningDate</label>
+                </div>
+            </div>
+        </div>
+    </div>
+}
